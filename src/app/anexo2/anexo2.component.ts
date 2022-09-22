@@ -16,6 +16,8 @@ export class Anexo2Component implements OnInit {
 
   empre: Empresa[] = [];
 
+  estado:boolean = false;
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
@@ -41,6 +43,21 @@ export class Anexo2Component implements OnInit {
     );
   }
 
+  checkCheckBoxvalue(event:any){
+
+    this.estado = event.target.checked;
+    //alert(event.target.checked)
+    console.log(event.target.checked)
+ }
+
+ paso(){
+  if(this.estado === false){
+    alert('Error usted no puede pasar de esta parte..')
+  }else{
+    
+    alert('Paso bien ')
+  }
+}
 
   // open(){
   //   alert( " awsssddfddfddcfdcvbv  "+ this.autoevaluacion) 
