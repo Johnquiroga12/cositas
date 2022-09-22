@@ -1,0 +1,210 @@
+<div class="box">
+  <mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Terminos</ng-template>
+        <p class="card-text">El estudiante tendrá las siguientes obligaciones:
+          <br>
+
+          a. Cumplir con los requerimientos académicos de la IES y los de su formación en la entidad receptora
+          formadora;
+          <br>
+          b. Participar activamente en el desarrollo de su formación profesional y elecutar las tareas que le fueran
+          encomendadas en atención a las orientaciones técnicas recibidas de los tutores;
+          <br>
+          c. Cumplir con los horarios, normas disciplinarias, y de seguridad y salud, reglas de comportamiento ético
+          y
+          otras, establecidas en la IES y en la entidad receptora formadora. El incumplimiento comprobado de dichos
+          instrumentos normativos será causa para el inicio de un procedimiento disciplinario en la IES, sin
+          perjuicio de la
+          decisión de la entidad receptora formadora con relación a la permanencia del estudiante en la misma;
+          <br>
+          d. Comunicar y justificar oportunamente a la entidad receptora formadora la inasistencia a su formación
+          por
+          motivos de fuerza mayor, enfermedad o calamidad doméstica, debidamente probadas;
+          <br>
+          e. Utilizar las herramientas, máquinas, equipos e insumos asignados para su formación según las
+          indicaciones
+          técnicas recibidas, tanto en el entorno institucional educativo como en el entorno laboral real. Los daños
+          ocasionados en los citados recursos que sean producto de negligencia, Impericia o imprudencia, debidamente
+          probada, serán responsabilidad del estudiante, tanto disciplinaria como financieramente, situación que
+          deberá
+          estar prevista en el respectivo convenio, de forma que la IES pueda repetir contra el estudiante, aquellos
+          valores
+          que hayan sido cancelados por concepto de reparación de daños;
+          <br>
+          f. Guardar estricta reserva sobre la información y productos generados en la entidad receptora formadora,
+          en
+          correspondencia con las normas establecidas las orientaciones recibidas. El incumplimiento comprobado de
+          dichos
+          instrumentos normativos será causa para el inicio de un procedimiento disciplinario en la IES, sin
+          perjuicio de la
+          decisión de la entidad receptora formadora con relación a la permanencia del estudiante en la misma y las
+          acciones
+          legales que esta pudiera emprender
+          <br>
+          g. Realizar la evaluación correspondiente a la actividad educativa de profesores y tutores, tanto en la
+          IES como
+          en la entidad receptora formadora; instrumentos normativos será causa para el inicio de un procedimiento
+          disciplinario en la ES, sin perjuicio de la decisión de la entidad receptora formadora con relación a la
+          permanencia del estudiante en la misma y las acciones legales que esta pudiera emprender;
+          <br>
+          h. Suscribir aspectos:
+          <br>
+          el acuerdo de confidencialidad con la entidad receptora formadora de acuerdo a los siguientes
+        </p>
+        <div>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Seleccion de empresa</ng-template>
+
+        <table style="text-align:center;" class="table">
+          <thead>
+            <tr>
+              <th>Nombre de la empresa </th>
+              <th>
+                <form>
+                  <select name="ellegir" >
+                    <option selected disabled> selecione la empresa </option>
+                    <option *ngFor="let empresa of empre"> {{empresa.nombre_empresa}} </option>
+                  </select>
+                </form>
+              </th>
+            </tr>
+          </thead>
+        </table>
+        <a>
+          <p class="card-text">
+            a.No divulgar a terceras personas o instituciones el contenido de cualquier documentación o información de
+            la
+            empresa ...,
+            que haya sido obtenida como parte del proceso de prácticas preprofesionales;
+            <br>
+            b. No permitir a terceros el manejo de documentación de la empresa, que pueda tener en mi poder,
+            <br>
+            c. No explotar y aprovechar en beneficio propio, o permitir el uso por otros, de las informaciones obtenidas
+            o
+            conocimientos adquiridas durante el proceso de formación dual;
+            <br>
+            d. En caso de tener acceso a documentación importante de la empresa asumo ética y responsablemente el manejo
+            y/o acceso a la misma.
+            <br>
+            e. Finalizada mi proceso formativo, no conservar documentación que sea de propiedad de la empresa formadora,
+            ni permitir que se realicen coplas no autorizadas de esta información i
+            <br>
+            f. Elaborar la bitácora de la formación en el entorno laboral real, que deberá contener las actividades
+            realizadas diariamente y ser entregada al tutor general responsable para su validación; así como también su
+            registro de asistencia debidamente legalizado. Una vez validados estos documentos, será responsabilidad del
+            estudiante ponerlos a consideración del tutor académico de acuerdo a los tiempos establecidos en el plan de
+            aprendizaje práctico.
+            <br>
+            <br>
+
+            <input type="checkbox" style="position: relative;" name="validar_check">Estoy de acuerdo con los terminos y
+            condicones
+          </p>
+        </a>
+        <br>
+        <div>
+          <br>
+          <br>
+          <br>
+          <button mat-button matStepperPrevious>Volver</button>
+          <button  mat-button matStepperNext>Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Descargar </ng-template>
+      <table style="text-align:center;" class="table">
+        <thead>
+          <tr>
+            <th>
+              <p>
+                Se ha generado el documento de obligaciones generales
+                del estudiante y de acu erdo confidencialidad,
+                <br>
+                porfavor descargarlo, imprimirlo, firmarlo, escanearlo y volver a subir
+              </p>
+            </th>
+            <th>
+              <a download="archivo "
+                href=" data:image/jpeg;base64,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">
+                descargar el archivo</a>
+            </th>
+          </tr>
+        </thead>
+      </table>
+      <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <button mat-button matStepperPrevious>Volver</button>
+        <button mat-button matStepperNext>Siguiente</button>
+        <!-- 
+        <button mat-button matStepperPrevious>Volver</button>
+        <button mat-button (click)="stepper.reset()">Siguiente</button> -->
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Subir archivo</ng-template>
+
+        <table style="text-align:center;" class="table">
+          <thead>
+            <tr>
+              <p class="card-text">
+
+                <th>Subir archibo PDF con su
+                  <br>
+                  firma corespondiente escaneada
+                </th>
+              </p>
+              <th>
+                <input type="file" name="file-7" id="file-7" class="inputfile inputfile-7"
+                  data-multiple-caption="{count} archivos seleccionados" multiple />
+                <label for="file-7">
+                  <span class="iborrainputfile"></span>
+                  <!--<strong>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17"
+                         viewBox="0 0 20 17">
+                         <path
+                            d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                           </path>
+                      </svg>
+                          Seleccionar archivo
+                      </strong> -->
+                </label>
+              </th>
+            </tr>
+          </thead>
+        </table>
+        <p class="card-text">
+        </p>
+        <div>
+          <button mat-button matStepperPrevious>Volver</button>
+          <button mat-button (click)="stepper.reset()">Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+
+  </mat-stepper>
+
+</div>

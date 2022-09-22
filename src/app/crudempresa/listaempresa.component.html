@@ -1,0 +1,36 @@
+<div class="box">
+<p class="titulo">EMPRESAS REGISTRADAS</p>
+<table class="table table-bordered table-striped">
+  <thead>
+      <tr class="tabla">
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Direccion</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>Usuario</th>
+          <th>Editar</th>
+      </tr>
+  </thead>
+  <tbody>
+      <!--<tr *ngFor="let cliente of clientes"  class="td">-->
+        <tr class="td">
+          <td class="centracampo"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="centracampo"></td>
+          <td class="centracampo">
+              <button type="button" name="button" class="btn btn-primary">Editar</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+<nav class="posicion">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" routerLink="/crudempresa">Registrar Empresa</a></li>
+      <li class="page-item"><a class="page-link" routerLink="/listaempresa">Lista Empresa</a></li>
+    </ul>
+  </nav>
+</div>

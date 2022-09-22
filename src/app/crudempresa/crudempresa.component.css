@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.mat-form-field {
+    margin-top: 16px;
+  }
+
+  .box {
+    border: 1px solid darkblue;
+    width: 700px;
+    height: 500px;
+    margin: -550px auto;
+    padding: 10%;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .posicion{
+    position: absolute;
+    margin: 300px
+  }
+
+  .box .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .box .mat-form-field {
+    width: 220px;
+  }
+  
+  .box form {
+    margin-bottom: 20px;
+  }
+  
+  .box form > * {
+    margin: 5px 0;
+  }
+  
+  .box .mat-radio-button {
+    margin: 0 12px;
+  }

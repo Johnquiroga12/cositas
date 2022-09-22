@@ -1,0 +1,97 @@
+<div class="box">
+    <!--Menu Crud-->
+    <mat-stepper #stepper style="margin: -150px auto;">
+        <mat-step  [stepControl]="firstFormGroup" errorMessage="Se debe llenar todos los campos.">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Datos de Empresa</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label >Nombre</mat-label>
+              <input matInput placeholder="Nombre de la empresa" formControlName="firstCtrl" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Ciudad</mat-label>
+              <input matInput placeholder="Nombre de la ciudad" formControlName="firstCtrl" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Direccion</mat-label>
+              <input matInput placeholder="Calles, Barrio" formControlName="firstCtrl" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Telefono</mat-label>
+              <input matInput placeholder="Móvil o Fijo" formControlName="firstCtrl" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Codigo Postal</mat-label>
+              <input matInput placeholder="XXXXXX" formControlName="firstCtrl" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="nombre@ejemplo.com" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <p>Antes de guardar revise que los datos esten correctos</p>
+              <button mat-button matStepperNext>Siguiente</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" errorMessage="Se debe llenar todos los campos.">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Datos Representante</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="Nombre Completo" formControlName="secondCtrl"
+                     required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Apellido</mat-label>
+              <input matInput placeholder="Apellido completo" formControlName="secondCtrl"
+                     required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="nombre@ejemplo.com" formControlName="secondCtrl"
+                     required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Direccion</mat-label>
+              <input matInput placeholder="Calles, Barrio" formControlName="secondCtrl"
+                     required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Telefono</mat-label>
+              <input matInput placeholder="Móvil o Fijo" formControlName="secondCtrl"
+                     required>
+            </mat-form-field>
+            <div>
+              <p>Antes de guardar revise que los datos esten correctos</p>
+              <button mat-button matStepperPrevious>Regresar</button>
+              <button mat-button matStepperNext>Siguiente</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Finalizar</ng-template>
+          <p>Terminado</p>
+          <div>
+            <button mat-button matStepperPrevious>Regresar</button>
+            <button mat-button (click)="stepper.reset()">Borrar</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+      <!--Fin Menu Crud-->
+      <nav class="posicion">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" routerLink="/crudempresa">Registrar Empresa</a></li>
+          <li class="page-item"><a class="page-link" routerLink="/listaempresa">Lista Empresa</a></li>
+        </ul>
+      </nav>
+    </div>

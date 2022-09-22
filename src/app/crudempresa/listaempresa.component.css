@@ -1,0 +1,44 @@
+.box {
+    border: 1px solid darkblue;
+    width: 700px;
+    height: 500px;
+    margin: -550px auto;
+    padding: 10%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .posicion{
+    position: absolute;
+    margin: 300px
+  }
+
+  .centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tabla {
+    border: 1px solid #000;
+    border-collapse: separate;
+    background-color: #2744c5;
+    color: rgb(248, 244, 244);
+    font-size: 18px;
+    padding: 2px;
+    text-align: center;
+  }
+  
+  .table{
+    margin: -100px
+  }
+  .td {
+    border: 1px solid #555;
+  }
+  .centracampo{
+    text-align: center;
+  }
+
+  .titulo{
+    position: absolute;
+    margin: -130px
+  }
