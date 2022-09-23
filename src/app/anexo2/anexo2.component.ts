@@ -17,6 +17,7 @@ export class Anexo2Component implements OnInit {
   empre: Empresa[] = [];
 
   estado:boolean = false;
+  
 
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
@@ -29,6 +30,7 @@ export class Anexo2Component implements OnInit {
 
 
   constructor(private _formBuilder: FormBuilder, private empresaservice: EmpresaService) {
+    let btn = document.getElementsByName('btnsp');
 
     for(let i =0; i < this.empre.length; i++){
       console.log(this.empre[i]);
@@ -36,7 +38,12 @@ export class Anexo2Component implements OnInit {
 
     
    }
+
+   buttonDisabled: boolean=false;
   ngOnInit(): void {
+    this.buttonDisabled = true;
+    
+    this.buttonDisabled = true;
     console.log('john')
     this.empresaservice.getempre().subscribe(
       Empresa => this.empre = Empresa
@@ -48,15 +55,22 @@ export class Anexo2Component implements OnInit {
     this.estado = event.target.checked;
     //alert(event.target.checked)
     console.log(event.target.checked)
+    this.paso()
  }
 
  paso(){
-  if(this.estado === false){
-    alert('Error usted no puede pasar de esta parte..')
+  if(this.estado === true){
+   // alert('Algo pasa '+this.estado)
+    this.buttonDisabled = false;
   }else{
-    
-    alert('Paso bien ')
+    this.buttonDisabled = true;
   }
+  // if(this.estado === false){
+  //   alert('Error usted no puede pasar de esta parte..')
+  // }else{
+    
+  //   alert('Paso bien ')
+  // }
 }
 
   // open(){

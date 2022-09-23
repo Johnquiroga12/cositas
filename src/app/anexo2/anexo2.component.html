@@ -104,7 +104,7 @@
             <br>
             <br>
 
-            <input type="checkbox" style="position: relative;" name="validar_check" (change)="checkCheckBoxvalue($event)" required>Estoy de acuerdo con los terminos y
+            <input type="checkbox" style="position: relative;" name="validar_check" (change)="checkCheckBoxvalue($event)" >Estoy de acuerdo con los terminos y
             condicones
           </p>
         </a>
@@ -114,7 +114,7 @@
           <br>
           <br>
           <button mat-button matStepperPrevious>Volver</button>
-          <button  mat-button  (click)="paso()">Siguiente</button>
+          <button name="btnsp"  disabled="{{buttonDisabled}}" mat-button  matStepperNext >Siguiente</button>
         </div>
       </form>
     </mat-step>
